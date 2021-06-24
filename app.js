@@ -109,7 +109,7 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
-
+// let arrrrrr = [5, 5, 4, 4, 7, 8, 9, 5, 6, 2,]
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
     let multiply_storing_Var
@@ -118,15 +118,15 @@ function multiplyArray(multArr) { //eslint-disable-line
 
         multiply_storing_Var = multiply(multArr[i], gg)[0];
         gg = multiply_storing_Var;
-        console.log(multiply_storing_Var, '->>');
+        // console.log(multiply_storing_Var, '->>');
     }
-    console.log(multiply_storing_Var);
+    // console.log(multiply_storing_Var);
     return [multiply_storing_Var, 'The numbers ' + multArr + ' have a product of ' + multiply_storing_Var + '.']
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(console.log(multiplyArray(testArray)));
+testMultiplyArray(/*console.log*/(multiplyArray(testArray)));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -150,10 +150,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    return multiplyArray(dynamicArray)
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
