@@ -59,9 +59,6 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
         let sum2 = sum(a,b)[0];
 sum2= sum(sum2,c)[0];
-
-   
-     
     let product = multiply(a,b)[0];
     product=multiply(product,c)[0];
 
@@ -113,12 +110,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 function multiplyArray(multArr) { //eslint-disable-line
 
+     //eslint-disable-line
+       
+    
+    
+   let first1 =multiply(multArr[0],multArr[1])[0];
+    let secod2 =multiply(first1,multArr[2])[0];
+   
+ return[secod2,"The numbers "+ multArr[0]+"," + multArr[1]+","+ multArr[2]+" have a product of "+secod2+"."];
+ console.log(multiplyArray);
+ 
+ 
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
