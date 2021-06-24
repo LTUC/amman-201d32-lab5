@@ -52,20 +52,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let  sum=(a,b)[0];
-sum2=sum(sum2,c)
-let uni=Multiply(a,b)[0];
-     uni=Multiply(uni,c);
-let third = [ a + ' and '  +b+ ' and ' +c+ ' sum to ' +sum+'.'];
-let fourth = ['The product of ' + a + '  and ' + b + ' and ' + c + ' is ' +Multiply+'.']
+let lll= sum(a,b)[0];
+let bb= sum (lll,c)[0];
+let hh=multiply(a,b)[0];
+let gg= multiply(hh,c)[0];
 
-return [sum,Multiply,third,fourth]
+
+
+return [bb,gg,a + ' and '  +b+ ' and ' +c+ ' sum to ' +bb+'.','The product of ' + a + '  and ' + b + ' and ' + c + ' is ' +gg+'.']
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
  testSumAndMultiply(4, 7, 5);
-console.log(sumAndMultiply);
+ 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
