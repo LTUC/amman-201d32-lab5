@@ -78,10 +78,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let sum4 = sum(testArray[0], testArray[1])[0];
-let total4 = sum(sum4, testArray[2])[0];
+let sum4 = sum(sumArr[0], sumArr[1])[0];
+let total4 = sum(sum4, sumArr[2])[0];
 
-return [total4, testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was ' + 'passed ' + 'in ' + 'as ' + 'an ' + 'array ' + 'of ' + 'numbers' + ', ' + 'and ' + total4 + ' is ' + 'their ' + 'sum' + '.']
+return [total4, sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was ' + 'passed ' + 'in ' + 'as ' + 'an ' + 'array ' + 'of ' + 'numbers' + ', ' + 'and ' + total4 + ' is ' + 'their ' + 'sum' + '.']
 }
 
 // Here is the test for sumArray(); uncomment it to run it
