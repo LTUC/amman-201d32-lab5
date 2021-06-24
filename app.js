@@ -8,10 +8,17 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+// store input numbers
+let a =prompt('Enter the first number ');
+let b =prompt('Enter the second number ');
 function sum(a, b) { //eslint-disable-line
 
-}
+let x = a +b ;
+return x ;
+console.log(x, 'The result of the  sum');
 
+}
+sum(a, b)
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
 
