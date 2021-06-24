@@ -98,6 +98,7 @@ function sumArray(sumArr) { //eslint-disable-line
     
 
 }
+// solved
 
 // Here is the test for sumArray(); uncomment it to run it
 
