@@ -135,10 +135,36 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+    //calculate multiplication
+    let result = 1;
+    for (let i = 0; i < multArr.length; i++) {
+        result = multiply(result,multArr[i])[0];
+    }
+
+    // string part
+    //get each element and store them in a string, supports any length of array.
+    let arrayElements = "";
+    for (let i = 0; i < multArr.length; i++) {
+        //to not add a comma for first number
+        if(i == 0)
+        {
+            arrayElements = multArr[i];
+        }
+        else
+        {
+            arrayElements += ","+multArr[i];
+        }
+        
+    }
+
+    let finalString = "The numbers "+arrayElements+" have a product of "+result+"."
+
+    return[result, finalString];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
