@@ -74,8 +74,9 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let SumNumbers= testArray[0]+testArray[1]+testArray[2];
-    return[SumNumbers,'2,3,4 was passed in as an array of numbers, and 9 is their sum.']
+    let SumArrayNumber1= sum(testArray[0],testArray[1])[0]
+    let SumArrayNumber2= sum(SumArrayNumber1,testArray[2])[0]
+    return[SumArrayNumber2,'2,3,4 was passed in as an array of numbers, and 9 is their sum.']
 }
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -95,7 +96,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    
+    return[]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
