@@ -103,7 +103,7 @@ function sumArray(sumArr) { //eslint-disable-line
     // return array
     return questionFourReturnArray;
 }
-
+// problem4 done
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
