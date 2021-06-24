@@ -90,7 +90,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
     let w = 0;
     for (let i = 0; i < sumArr.length; i++) {
-        w += sumArr[i];
+        w = sum(w, sumArr[i])[0];
     }
     return [w , sumArr + ' was passed in as an array of numbers, and '+ w +' is their sum.'];
 }
@@ -115,8 +115,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
     let q = 1;
-    for (let i = 0; i < multArr.length; i++) {
-        q *= multArr[i];
+    for (let i = 0; i < 3; i++) {
+        q = multiply(q, multArr[i])[0];
     }
     return [q ,'The numbers ' + multArr +' have a product of '+ q +'.'];
 }
