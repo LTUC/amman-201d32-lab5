@@ -118,13 +118,13 @@ function multiplyArray(multArr) { //eslint-disable-line
   }
   console.log(multi)
 
-  return [ multi,'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+multi+'.']
+  return [multi, 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multi + '.']
 }
 console.log(multiplyArray)
 
 
 // Here is the test for multiplyArray(); uncomment it to run it
- testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -149,7 +149,17 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  let multi2 = 1;
+  for (let i = 0; i < testDynamicArray.length; i++) {
+    multi2 *= testDynamicArray[i];
+
+  }
+  console.log(multi2)
+
+  return [multi2, 'The numbers ' + testDynamicArray[0] + ',' + testDynamicArray[1] + ',' + testDynamicArray[2] + ',' + testDynamicArray[3] + ',' + testDynamicArray[4] + 'have a product of ' + multi2 + '.']
 }
+
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
