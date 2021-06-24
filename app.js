@@ -11,8 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { 
     let sumreselt = a + b;
     return [sumreselt ,'The sum of ' + a +' and '+ b +' is '+sumreselt+'.']
-   sum (4,7); 
-console.log(sum);
+
 }
 
 // Here is the test for sum(); uncomment it to run it
