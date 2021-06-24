@@ -9,14 +9,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-let summation = a+b;
-return[summation,'The sum of '+a+ ' and '+b+' is '+summation+'.'];  
+    let summation = a + b;
+    return [summation, 'The sum of ' + a + ' and ' + b + ' is ' + summation + '.'];
 }
 
 //  problem one is done
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-console.log(sum(7,9));
+console.log(sum(7, 9));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -29,13 +29,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-let multiplication=a*b;
-return[multiplication,'The product of '+a+' and '+b+' is '+multiplication+'.']
+    var multArr = [];
+  var productAnswer = a * b;
+  multArr[0] = productAnswer;
+  multArr[1] = `The product of ${a} and ${b} is ${productAnswer}.`
+  return multArr;
 }
-
+console.log();
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5, 9);
-console.log(multiply(6,5));
+console.log(multiply(6, 5));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -48,14 +51,28 @@ Fourth element: "The product of 4 and 7 and 5 is 140."
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
-
+// console.log(sum(3,4));
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var sumAndMultiplyArray = []
+
+    var aPlusB = sum(a, b)[0];
+    var finalSum = sum(aPlusB, c)[0];
+    sumAndMultiplyArray[0] = finalSum;
+
+    var aTimesB = multiply(a, b)[0];
+    var finalProduct = multiply(aTimesB, c)[0];
+    sumAndMultiplyArray[1] = finalProduct;
+
+    sumAndMultiplyArray[2] = `${a} and ${b} and ${c} sum to ${finalSum}.`
+    sumAndMultiplyArray[3] = `The product of ${a} and ${b} and ${c} is ${finalProduct}.`
+
+    return sumAndMultiplyArray;
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -73,12 +90,23 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var questionFourReturnArray = [];
+    // calculate sum of numbers in array 
+    var aPlusB = sum((sumArr[0]), (sumArr[1]));
+    aPlusB = aPlusB[0];
+    var finalSum = sum(aPlusB, sumArr[2])[0];
+    // assign sum of numbers in array to the first index of the question4 return array
+    questionFourReturnArray[0] = finalSum;
+  
+    // create string and assign to second index of returned array
+    questionFourReturnArray[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`
+    // return array
+    return questionFourReturnArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
