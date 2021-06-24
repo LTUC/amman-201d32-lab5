@@ -103,6 +103,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray([a,s,d]) { //eslint-disable-line
     var x = sum(a,s)[0];
     var y = sum(x,d)[0];
+   console.log([a,s,d],'Sum of array')
     return [ a + "," + s + "," + d + " was passed in as an array of numbers, and " + y + " is their sum."]
 }
 sumArray([]);
@@ -133,6 +134,7 @@ function multiplyArray([a,s,d]) { //eslint-disable-line
 let = multiply(a,s)[0];
 let t = multiply(r,d)[0];
 return [t ,"The numbers " + a + "," + s + "," + d + " have a product of " + t + "." ];
+console.log([a,s,d],'Multiplay of array')
 }
 multiplyArray([])
 
