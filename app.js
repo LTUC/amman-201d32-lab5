@@ -57,7 +57,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
     //let fourthElement = "The product of "+a+" and "+b+" and "+c+" is "+multiplyResult+"."
 
-    return[sumResult, multiplyResult,a + ' and ' + b + ' and ' + c + ' sum to ' + sumResult + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyResult + '.']
+    return [sumResult, multiplyResult, a + ' and ' + b + ' and ' + c + ' sum to ' + sumResult + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyResult + '.']
     /*let sum1 = sum(a, b)[0];
     let total = sum(sum1 , c)[0];
    
@@ -86,15 +86,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
- problem4
-    let sum2 = sum(sumArr[0],sumArr[1])[0];
-    let total=sum(sum2,sumArr[2])[0];
+   
+    let sum2 = sum(sumArr[0], sumArr[1])[0];
+    let total = sum(sum2, sumArr[2])[0];
 
-return [total,'2,3,4 was passed in as an array of numbers, and '+total+ ' is their sum.'];
+    return [total, '2,3,4 was passed in as an array of numbers, and ' + total + ' is their sum.'];
 
-    sumaArr[2]
-    return 
- main
 }
 // Here is the test for sumArray(); uncomment it to run it
 testSumArray(testArray);
@@ -111,12 +108,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+ 
 function multiplyArray(multArr) { //eslint-disable-line
+    let multiply1 = multiply(multArr[0], multArr[1])[0];
+    let total = multiply(multiply1, multArr[2])[0];
+    
+    return [total, 'The numbers 2,3,4 have a product of ' + total+'.'];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
