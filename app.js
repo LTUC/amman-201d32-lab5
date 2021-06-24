@@ -90,7 +90,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
     let w = 0;
     for (let i = 0; i < sumArr.length; i++) {
-        w += sumArr[i];
+        w = sum (w, sumArr[i])[0];
     }
     return [w , sumArr + ' was passed in as an array of numbers, and '+ w +' is their sum.'];
 }
