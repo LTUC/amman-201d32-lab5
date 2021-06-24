@@ -10,10 +10,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 
+let sumResult = a + b
+return [sumResult, 'The sum of ' + a + ' and ' + b + ' is ' + sumResult + '.']
+
 }
 
+
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,18 +30,26 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) { //eslint-disable-line
+let multiplyResult = a * b
+return [multiplyResult, 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.']
+
+function multiply(a, b) { //eslint-disable-line
+let multiplyResult = a * b
+return [multiplyResult, 'The product of ' + a + ' and ' + b +' is ' + multiplyResult + '.']
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5, 9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 3
-Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
+Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, 
+the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -48,11 +60,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+ let sum = a + b + c
+ let multiply = a * b * c
+return [sum, multiply, a  + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + '.']
+
+// return[sum, T
 
 }
 
+console.log(sumAndMultiply(4,7,5));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
