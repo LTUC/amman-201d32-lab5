@@ -97,12 +97,34 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+ let n1 = testArray[0];
+ let n2 = testArray[1];
+ let n3 = testArray[2];
+
+ //console.log('the numbers are : ',n1,n2,n3);
+ let sumN1=sum(n1,n2);
+
+ //console.log(sumN1[0]);
+
+ let sumN2=sum(sumN1[0],n3);
+
+ //console.log('the total sum is ', sumN2[0]);
+
+let rrOut = n1+','+n2+','+n3+' was passed in as an array of numbers, and '+sumN2[0]+' is their sum.';
+
+// console.log('sum array', sumN2[0], rrOut);
+
+return [sumN2[0], rrOut] ;
+
 
 }
 
+
+
+//sumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
