@@ -84,15 +84,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let r = 0
+    let summation = 0;
     for (let i = 0; i < sumArr.length; i++) {
         
-         r += sumArr[i];
-            
-         
-        }
+        summation += sumArr[i];
         
-        return[r,'2,3,4 was passed in as an array of numbers, and 9 is their sum.']
+        
+    }
+    let manipulatedString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${summation} is their sum.`
+    
+        
+        return[summation,manipulatedString];
         
     };
    
@@ -116,9 +118,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
 function multiplyArray(multArr) { //eslint-disable-line
   
-    
+  
 }
 
 
