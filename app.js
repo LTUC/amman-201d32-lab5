@@ -33,10 +33,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+let q =prompt('Enter the first number ');
+let w =prompt('Enter the second number ');
+function multiply(q, w) { //eslint-disable-line
 
+    let m = q*w ;
+    return m ;
+    console.log(m, 'The result of the  multiply');
 }
-
+multiply(q, w)
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5, 9);
 
