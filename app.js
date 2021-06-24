@@ -9,19 +9,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 // store input numbers
-let a =prompt('Enter the first number ');
-let b =prompt('Enter the second number ');
+
 function sum(a, b) { //eslint-disable-line
 
 let x = a +b ;
-return x ;
+return [x, "The sum of " + a + " and " + b + " is " + x + "."];
 console.log(x, 'The result of the  sum');
 document.write('The result of the  sum =' + x)
 
 }
 sum(a, b)
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -34,8 +33,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-let q =prompt('Enter the first number ');
-let w =prompt('Enter the second number ');
+
 function multiply(q, w) { //eslint-disable-line
 
     let m = q*w ;
@@ -125,12 +123,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
 
+let testArray = [2, 3, 4]; //eslint-disable-line
+function multiplyArray([a,s,d]) { //eslint-disable-line
+let = multiply(a,s)[0];
+let t = multiply(r,d)[0];
+return [t ,"The numbers " + a + "," + s + "," + d + " have a product of " + t + "." ];
 }
+multiplyArray([])
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
