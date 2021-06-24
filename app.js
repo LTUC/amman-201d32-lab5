@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
     var c = a + b
-   return [c, "The sum of " + a + " and " + b + " is " + c + "."]
+    return [c, "The sum of " + a + " and " + b + " is " + c + "."]
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -28,12 +28,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { 
+function multiply(a, b) {
     var c = a * b
-   return [c, "The product of " + a + " and " + b + " is " + c + "."]
+    return [c, "The product of " + a + " and " + b + " is " + c + "."]
 }
-testMultiply(4,7);
+testMultiply(4, 7);
 console.log(multiply(4, 7));
+console.log(multiply(4, 7)[0]);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5, 9);
@@ -52,12 +53,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a, b, c) {
+var d = multiply(multiply(a, b)[0], c)[0]
+var e = sum(sum(a, b)[0], c)[0]
+return [e, d, a+" and "+b+" and "+c+" sum to "+ e+".", "The product of " +a+ " and "+b+" and "+c+" is "+ d+"." ]
 }
+console.log(sumAndMultiply(4,7,5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
