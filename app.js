@@ -57,13 +57,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let rSum = a + b + c;
-    let Rm = a * b *c;
-    let third =  a+' and '+b+' and '+c+' sum to '+rSum+'.';
-    let forth = 'The product of '+a+' and '+b+' and '+c+' is '+Rm+'.'
-     console.log([rSum,Rm, third, forth]);
-     
-        return [rSum,Rm,third,forth];
+    let adSum = sum(a,b);
+    //console.log(adSum[0]);
+    let adSum2 = sum(adSum[0],c);
+    //console.log(adSum2[0]);
+    
+    let ma = multiply(a, b);
+    //console.log(ma[0]);
+    let ma2 = multiply(ma[0], c);
+   // console.log(ma2[0]);
+
+    let rOut =[adSum2[0],ma2[0],
+        a+' and '+b+' and '+c+' sum to '+adSum2[0]+'.',
+        'The product of '+a+' and '+b+' and '+c+' is '+ma2[0]+'.'
+    ]
+   console.log('the result', rOut);
+   return rOut;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
