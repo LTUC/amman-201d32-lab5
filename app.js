@@ -14,11 +14,13 @@ function sum(a,b) { //eslint-disable-line
 
 let x = a +b ;
 return [x, "The sum of " + a + " and " + b + " is " + x + "."];
-console.log(x, 'The result of the  sum');
-}
 
-// Here is the test for sum(); uncomment it to run it
+}
+testSum(1, 2);
 testSum(4, 7);
+console.log(sum(4,6), 'The result of the  sum');
+// Here is the test for sum(); uncomment it to run it
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -36,12 +38,14 @@ function multiply(q, w) { //eslint-disable-line
 
     let m = q*w ;
     
-    console.log(m, 'The result of the  multiply');
+    
     return [m, "The product of " + q + " and " + w + " is " + m + "."];
 }
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5, 9);
+testMultiply(7, 88);
+console.log(multiply(78, 5), 'The result of the  multiply');
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -65,14 +69,17 @@ let sum1 = sum(n, g)[0];
 let sum2 = sum(sum1, f)[0];
 let multi1 = multiply(n, g)[0];
 let multi2 = multiply(multi1, f)[0];
-console.log(multi2, 'The result of the  multiply');
+
 console.log(sum2, 'The result of the  sum');
 
 return [sum2, multi2, +n + " and " + g + " and " + f + " sum to " + sum2 + ".", "The product of " + n + " and " + g + " and " + f + " is " + multi2 + "."];
 }
 
-// Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(7, 9, 1);
+console.log(sumAndMultiply(1, 4, 0), 'The result ');
+// Here is the test for sumAndMultiply(); uncomment it to run it
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -94,7 +101,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-let testArray = [2,3,4]; //eslint-disable-line
+var testArray = [9,3,4]; //eslint-disable-line
 
 function sumArray([a,s,d]) { 
     //eslint-disable-line
@@ -107,7 +114,8 @@ return [ a + "," + s + "," + d + " was passed in as an array of numbers, and " +
 
 // // // Here is the test for sumArray(); uncomment it to run it
 testSumArray(testArray);
-
+// testSumArray(testArray);
+console.log([9,3,4],'Sum of array')
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -127,17 +135,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-let testArray = [2, 3, 4]; //eslint-disable-line
+var testArray = [2, 3, 4]; //eslint-disable-line
 
 function multiplyArray([a,s,d])
 { //eslint-disable-line
 let p = multiply(a,s)[0];
 let t = multiply(p,d)[0];
 return [t ,"The numbers " + a + "," + s + "," + d + " have a product of " + t + "." ];
-console.log([a,s,d],'Multiplay of array')
+
 }
 testMultiplyArray(testArray);
-
+console.log([3,6,90],'Multiplay of array')
 
 // // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray1);
