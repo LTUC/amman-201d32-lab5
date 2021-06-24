@@ -140,11 +140,31 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    let w1 = testArray[0];
+    let w2 = testArray[1];
+    let w3 = testArray[2];
+   
+    //console.log('the numbers are : ',n1,n2,n3);
+    let mltiW1=multiply(w1,w2);
+   
+    //console.log(sumN1[0]);
+   
+    let mltiW2=multiply(mltiW1[0],w3);
+   
+    //console.log('the total sum is ', sumN2[0]);
+   
+   let mmOut = 'The numbers '+ w1+','+w2+','+w3+' have a product of '+mltiW2[0]+'.';
+   
+    //console.log('multi array', mltiW2[0], mmOut);
+   
+   return [mltiW2[0], mmOut] ;
 }
 
+
+//multiplyArray(testArray);
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
