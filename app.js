@@ -76,7 +76,10 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
- testSumAndMultiply(4, 7, 5);
+
+//sumAndMultiply(4, 7, 5);  // when i call this function no problem happened
+
+testSumAndMultiply(4, 7, 5); // if i call this function an error show in the consol
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
