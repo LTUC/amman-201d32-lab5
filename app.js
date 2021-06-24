@@ -81,8 +81,41 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+    //sum of array elements
+    let result = 0;
+    //calculate result without direct useof + as told.
+    for (let i = 0; i < sumArr.length; i++) {
+        
+        result = sum(result,sumArr[i])[0];
+    }
+
+    // string part
+    //get each element and store them in a string, supports any length of array.
+    let arrayElements = "";
+    for (let i = 0; i < sumArr.length; i++) {
+        //to not add a comma for first number
+        if(i == 0)
+        {
+            arrayElements = sumArr[i];
+        }
+        else
+        {
+            arrayElements += ","+sumArr[i];
+        }
+        
+    }
+    //console.log(arrayElements);
+
+    let finalString = arrayElements+" was passed in as an array of numbers, and "+result+" is their sum."
+    
+    //console.log(finalString);
+
+    return[result, finalString];
 }
 
+// Here is the test for sumArray(); uncomment it to run it
+
+testSumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
