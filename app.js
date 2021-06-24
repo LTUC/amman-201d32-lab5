@@ -37,9 +37,9 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(q, w) { //eslint-disable-line
 
     let m = q*w ;
-    return m ;
+    
     console.log(m, 'The result of the  multiply');
-    document.write('The result of the  multiply =' + m)
+    return [m, "The product of " + q + " and " + w + " is " + m + "."];
 }
 multiply(q, w)
 // Here is the test for multiply(); uncomment it to run it
@@ -60,26 +60,30 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-let n =prompt('Enter the first number ');
-let g =prompt('Enter the second number ');
-let f =prompt('Enter the thired number ');
+
 function sumAndMultiply(n, g, f) { //eslint-disable-line
 
     
 
-let sum = n+ g+ f;
-let multi=n*g*f ;
-console.log(multi, 'The result of the  multiply');
-console.log(sum, 'The result of the  sum');
-return sum +"   " +multi ;
-document.write('The result of the  multiply =' + multi)
-document.write('The result of the  sum =' + sum)
+let sum1 = sum(n, g)[0];
+let sum2 = sum(sum1, f)[0];
+let multi1 = multiply(n, g)[0];
+let multi2 = multiply(multi1, f)[0];
+console.log(multi2, 'The result of the  multiply');
+console.log(sum2, 'The result of the  sum');
+
+return [multi2, sum1, +n + " and " + g + " and " + f + " sum to " + sum2 + ".", "The product of " + n + " and " + g + " and " + f + " is " + multi2 + "."];
+
 }
 sumAndMultiply(n, g, f)
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
+
+
+
 
 /////////////////////////////////////
 /* Problem 4
