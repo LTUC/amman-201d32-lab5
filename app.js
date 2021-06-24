@@ -9,11 +9,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+    let result = a + b;
 
+    return [result,"The sum of "+a+" and "+b+" is "+result+"."]
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -27,11 +29,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    let result = a * b;
+    return [result,"The product of "+a+" and "+b+" is "+result+"."]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5, 9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,11 +51,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    let sumResult = a + b + c;
+    let multiplyResult = a * b * c;
+    
+    let thirdElement = a+" and "+b+" and "+c+" sum to "+sumResult+"."
 
+    let fourthElement = "The product of "+a+" and "+b+" and "+c+" is "+multiplyResult+"."
+
+    return[sumResult, multiplyResult, thirdElement, fourthElement]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -71,8 +81,41 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+    //sum of array elements
+    let result = 0;
+    //calculate result without direct useof + as told.
+    for (let i = 0; i < sumArr.length; i++) {
+        
+        result = sum(result,sumArr[i])[0];
+    }
+
+    // string part
+    //get each element and store them in a string, supports any length of array.
+    let arrayElements = "";
+    for (let i = 0; i < sumArr.length; i++) {
+        //to not add a comma for first number
+        if(i == 0)
+        {
+            arrayElements = sumArr[i];
+        }
+        else
+        {
+            arrayElements += ","+sumArr[i];
+        }
+        
+    }
+    //console.log(arrayElements);
+
+    let finalString = arrayElements+" was passed in as an array of numbers, and "+result+" is their sum."
+    
+    //console.log(finalString);
+
+    return[result, finalString];
 }
 
+// Here is the test for sumArray(); uncomment it to run it
+
+testSumArray(testArray);
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
@@ -92,10 +135,36 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+    //calculate multiplication
+    let result = 1;
+    for (let i = 0; i < multArr.length; i++) {
+        result = multiply(result,multArr[i])[0];
+    }
+
+    // string part
+    //get each element and store them in a string, supports any length of array.
+    let arrayElements = "";
+    for (let i = 0; i < multArr.length; i++) {
+        //to not add a comma for first number
+        if(i == 0)
+        {
+            arrayElements = multArr[i];
+        }
+        else
+        {
+            arrayElements += ","+multArr[i];
+        }
+        
+    }
+
+    let finalString = "The numbers "+arrayElements+" have a product of "+result+"."
+
+    return[result, finalString];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
