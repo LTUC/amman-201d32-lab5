@@ -32,11 +32,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    let mResult = a*b;
+    console.log('The product of '+a+' and '+b+' is '+mResult+'.');
+    let finalmResult ='The product of '+a+' and '+b+' is '+mResult+'.';
+    return [mResult,finalmResult];
 
 }
-
+//multiply(5, 3);
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5, 9);
+ testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,17 +57,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let rSum = a + b + c;
-    let Rm = a * b *c;
-    let third =  a+' and '+b+' and '+c+' sum to '+rSum+'.';
-    let forth = 'The product of '+a+' and '+b+' and '+c+' is '+Rm+'.'
-     console.log([rSum,Rm, third, forth]);
-     
-        return [rSum,Rm,third,forth];
+    let adSum = sum(a,b);
+    //console.log(adSum[0]);
+    let adSum2 = sum(adSum[0],c);
+    //console.log(adSum2[0]);
+    
+    let ma = multiply(a, b);
+    //console.log(ma[0]);
+    let ma2 = multiply(ma[0], c);
+   // console.log(ma2[0]);
+
+    let rOut =[adSum2[0],ma2[0],
+        a+' and '+b+' and '+c+' sum to '+adSum2[0]+'.',
+        'The product of '+a+' and '+b+' and '+c+' is '+ma2[0]+'.'
+    ]
+   console.log('the result', rOut);
+   return rOut;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
- testSumAndMultiply(4, 7, 5);
+
+//sumAndMultiply(4, 7, 5);  // when i call this function no problem happened
+
+testSumAndMultiply(4, 7, 5); // if i call this function an error show in the consol
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
