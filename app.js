@@ -50,9 +50,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sumoutput = a + b + c
-    let multiplayoutput = a * b * c
-    return [sumoutput,multiplayoutput,a + ' and ' + b + ' and ' + c + ' sum to ' + sumoutput + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplayoutput + '.'];
+    let sumResult = a + b + c;
+    let multiplyResult = a * b * c;
+
+    //let thirdElement = a+" and "+b+" and "+c+" sum to "+sumResult+"."
+
+    //let fourthElement = "The product of "+a+" and "+b+" and "+c+" is "+multiplyResult+"."
+
+    return[sumResult, multiplyResult,a + ' and ' + b + ' and ' + c + ' sum to ' + sumResult + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyResult + '.']
+    /*let sum1 = sum(a, b)[0];
+    let total = sum(sum1 , c)[0];
+   
+   let multiply1 =multiply(a, b)[0];
+ let total2 =multiply(multiply1,c)[0];
+    //let sumoutput = a + b + c
+    //let multiplayoutput = a * b * c
+    return [total,total2, a + ' and ' + b + ' and ' + c + ' sum to ' + total + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + total2 + '.'];*/
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,7 +87,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    sumaArr[2]
+    return 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
