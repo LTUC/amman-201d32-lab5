@@ -59,11 +59,10 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let firstelement =sum(firstelement0, c)[0];
  let  secondelement0 = multiply(a, b)[0];
   let secondelement = multiply(c, secondelement0)[0];
-  return [firstelement, secondelement, a + ' and ' + b + ' and ' + c + ' sum to ' + firstelement + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondelement + '.'];
-
+  return [firstelement, secondelement, a + ' and ' + b + ' and ' + c + ' sum to ' + firstelement + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondelement + '.']
 
 }
-
+//comment
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
 
