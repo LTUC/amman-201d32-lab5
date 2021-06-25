@@ -30,23 +30,9 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
 function multiply(a, b) { //eslint-disable-line
 let multiplyResult = a * b
 return [multiplyResult, 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.']
-
-function multiply(a, b) { //eslint-disable-line
-let multiplyResult = a * b
- problem5
-return [multiplyResult, 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.']
-
-problem3
-return [multiplyResult, 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.']
-
-return [multiplyResult, 'The product of ' + a + ' and ' + b +' is ' + multiplyResult + '.']
-
-main
- main
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -59,7 +45,7 @@ testMultiply(5, 9);
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, 
 the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
 
-Third element: "4 and 7 and 5 sum to 16."
+Third element: "4 and 7  sum to 16and 5."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
 IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
@@ -68,23 +54,28 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
- let sum = a + b + c
- let multiply = a * b * c
-return [sum, multiply, a  + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + '.']
+
+    let sumFirst= sum (a,b);
+    let sumSecond = sum (sumFirst[0],c);
+     
+    let multiplyFirst = multiply (a,b);
+    let multiplySecond = multiply (multiplyFirst [0],c);
+    return [sumSecond, multiplySecond, a + ' and ' + b + ' and ' + c + ' sum to ' + sumSecond + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplySecond + '.']
+
+
+
+
+
+
+//  let sum = a + b + c
+//  let multiply = a * b * c
+// return [sum, multiply, a  + ' and ' + b + ' and ' + c + ' sum to ' + sum + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply + '.']
 
 // return[sum, T
 
 }
 
- problem5
 // console.log(sumAndMultiply(4,7,5));
-
-problem4
-// console.log(sumAndMultiply(4,7,5));
-
-console.log(sumAndMultiply(4,7,5));
-main
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4, 7, 5);
 
@@ -105,18 +96,11 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
     let sum = 0
- problem5
     for (let i of sumArr) {
         sum = sum + i
     }
 
     return [sum,sumArr[0]+','+sumArr[1]+','+sumArr[2]+ ' was passed in as an array of numbers, and ' + sum + ' is their sum.']
-    for (let i of testArray) {
-        sum = sum + i
-    }
-
-    return [sum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and ' + sum + ' is their sum.']
- main
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -144,7 +128,7 @@ function multiplyArray(multArr) { //eslint-disable-line
         return [product,'The numbers ' + multArr[0]+','+ multArr[1] +','+ multArr[2] + ' have a product of ' + product + '.']
 
 }
-console.log(multiplyArray(testArray));
+//  console.log(multiplyArray(testArray));
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
