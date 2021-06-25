@@ -60,7 +60,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
      
     let multiplyFirst = multiply (a,b);
     let multiplySecond = multiply (multiplyFirst [0],c);
-    return [sumSecond, multiplySecond, a + ' and ' + b + ' and ' + c + ' sum to ' + sumSecond + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplySecond + '.']
+    return [sumSecond[0], multiplySecond[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumSecond[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplySecond[0] + '.']
 
 
 
@@ -95,12 +95,23 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let sum = 0
-    for (let i of sumArr) {
-        sum = sum + i
-    }
+    let sum1 = sum (testArray[0],testArray[1]);
+    let sum2 = sum (sum1[0],testArray[2]);
+    return [sum2[0],testArray + ' was passed in as an array of numbers, and ' + sum2[0] + ' is their sum.']
+    
 
-    return [sum,sumArr[0]+','+sumArr[1]+','+sumArr[2]+ ' was passed in as an array of numbers, and ' + sum + ' is their sum.']
+
+
+
+
+
+
+    // let sum = 0
+    // for (let i of sumArr) {
+    //     sum = sum + i
+    // }
+
+    // return [sum,sumArr[0]+','+sumArr[1]+','+sumArr[2]+ ' was passed in as an array of numbers, and ' + sum + ' is their sum.']
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -121,11 +132,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-    let product = 1
-    for (let i of multArr) {
-        product = product * i}
+    let multiply1 = multiply (testArray[0],testArray[1]);
+    let multiply2 = multiply (multiply1[0],testArray[2]);
+    return [multiply2[0],'The numbers ' + testArray + ' have a product of ' + multiply2[0] + '.']
 
-        return [product,'The numbers ' + multArr[0]+','+ multArr[1] +','+ multArr[2] + ' have a product of ' + product + '.']
+
+
+
+
+
+    // let product = 1
+    // for (let i of multArr) {
+    //     product = product * i}
+
+    //     return [product,'The numbers ' + multArr[0]+','+ multArr[1] +','+ multArr[2] + ' have a product of ' + product + '.']
 
 }
 //  console.log(multiplyArray(testArray));
