@@ -54,9 +54,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { 
-    let theSum3E = a + b +c ;
-    let theProduct = a * b * c ;
-  return[theSum3E, theProduct,''+a+' and '+b+' and '+c+' sum to 16.', 'The product of '+a+' and '+b+' and '+c+' is 140.']  
+    let theSum3E =sum( sum(a,b)[0], c)[0] ;
+    let theProduct =multiply( multiply(a, b)[0], c)[0] ;
+  return[theSum3E, theProduct,''+a+' and '+b+' and '+c+' sum to '+theSum3E+'.', 'The product of '+a+' and '+b+' and '+c+' is '+theProduct+'.']  
 
 }
 
@@ -79,7 +79,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { 
-    let theSumOfArr = testArray[0]+testArray[1]+testArray[2];
+    let theSumOfArr = sum( sum(testArray[0],testArray[1])[0], testArray[2])[0] ;
     return [theSumOfArr,''+testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+theSumOfArr+' is their sum.']
     
 }
@@ -103,7 +103,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 
 function multiplyArray(testArray) { 
-    let theProduct = testArray[0]*testArray[1]*testArray[2]
+    let theProduct =multiply( multiply(testArray[0], testArray[1])[0], testArray[2])[0] 
     return[theProduct, 'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+theProduct+'.']
 
 }
