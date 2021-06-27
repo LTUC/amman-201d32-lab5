@@ -52,9 +52,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sumResult = a+b+c;
-    let mulResult = a*b*c;
-    return [sumResult,mulResult,a + ' and ' + b + ' and ' + c + ' sum to '+ sumResult +'.','The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mulResult +'.'  ];                           
+    let sumResult = sum(a,b);
+    let sumResult1 =sum(sumResult[0],c)
+
+    let mulResult = multiply(a,b);
+    let mulResult1 = multiply(mulResult[0],c)
+
+    let msg1=`${a} and ${b} and ${c} sum to ${sumResult1[0]}.`
+    let msg2 =`The product of ${a} and ${b} and ${c} is ${mulResult1[0]}.`
+
+    return [sumResult1[0],mulResult1[0],msg1,msg2];                               
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -83,7 +91,6 @@ function sumArray(sumArr) { //eslint-disable-line
     let sumResult1 = sum(sumResult[0],testArray[2]);
     let msg=testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumResult1[0] + ' is their sum.';
     return [sumResult1[0],msg] 
-
 }
 
 // Here is the test for sumArray(); uncomment it to run it
