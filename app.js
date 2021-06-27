@@ -8,12 +8,16 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
+
+function sum(a, b) { 
+    let theSum = a+b
+    return [theSum, 'The sum of '+a+' and '+b+' is '+theSum+'.']
+
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -26,12 +30,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+function multiply(a, b) { let theMultiply = a*b
+    return [theMultiply, 'The product of '+a+' and '+b+' is '+theMultiply+'.']
+
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5, 9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,12 +53,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) { 
+    let theSum3E =sum( sum(a,b)[0], c)[0] ;
+    let theProduct =multiply( multiply(a, b)[0], c)[0] ;
+  return[theSum3E, theProduct,''+a+' and '+b+' and '+c+' sum to '+theSum3E+'.', 'The product of '+a+' and '+b+' and '+c+' is '+theProduct+'.']  
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -69,13 +78,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
+function sumArray(testArray) { 
+    let theSumOfArr = sum( sum(testArray[0],testArray[1])[0], testArray[2])[0] ;
+    return [theSumOfArr,''+testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+theSumOfArr+' is their sum.']
+    
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -90,12 +101,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+
+function multiplyArray(testArray) { 
+    let theProduct =multiply( multiply(testArray[0], testArray[1])[0], testArray[2])[0] 
+    return[theProduct, 'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+theProduct+'.']
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
