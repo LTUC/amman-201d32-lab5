@@ -51,14 +51,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let thesum=  a + b + c 
-    let themult=a*b*c
-    return [thesum , themult , a + " and " +b+ " and " +c+ " sum to " +thesum+ "." , "The product of " +a+ " and " +b+" and "+c+" is "+themult+ "." ]
+    let thesum1 = sum(a, b);
+    let thesum = sum(thesum1[0], c);
+    
+    let themult1=multiply(a, b)
+    let themult=multiply(themult1[0], c)
+    
+
+    return [thesum[0] , themult[0] , a + " and " +b+ " and " +c+ " sum to " +thesum[0] + "." , "The product of " +a+ " and " +b+" and "+c+" is "+themult[0] + "." ]
 
 }
-// console.log(sumAndMultiply(5, 5, 5));
+console.log(sumAndMultiply(5, 5, 5));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -76,9 +81,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+
     let thesum= sum(testArray[0], testArray[1]) ; 
     let thesum1= sum(thesum[0], testArray[2])
     return [ thesum1[0] , testArray[0] + "," + testArray[1] + "," + testArray[2] + " was passed in as an array of numbers, and "+ thesum1[0] +" is their sum."   ]
+
+    let thesum= testArray[0] + testArray[1] + testArray[2] ; 
+    return [ thesum , testArray[0] + "," + testArray[1] + "," + testArray[2] + " was passed in as an array of numbers, and "+ thesum +" is their sum." ]
+
 
 }
 // console.log(sumArray(testArray));
@@ -100,11 +110,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    let result1=multiply((testArray[0]) , (testArray[1]) );
+        result1 = result1[0]
+    let result2 = multiply((result1) , (testArray[2]) )
+        result2 = result2[0]
+    return [ result2 ,"The numbers " + testArray[0] + "," + testArray[1] + "," + testArray[2] + " have a product of "+ result2 +"."   ]
 
 }
+console.log(multiplyArray(testArray));
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
