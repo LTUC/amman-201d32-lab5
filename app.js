@@ -51,14 +51,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let thesum=  a + b + c 
-    let themult=a*b*c
-    return [thesum , themult , a + " and " +b+ " and " +c+ " sum to " +thesum+ "." , "The product of " +a+ " and " +b+" and "+c+" is "+themult+ "." ]
+    let thesum1 = sum(a, b);
+    let thesum = sum(thesum1[0], c);
+    
+    let themult1=multiply(a, b)
+    let themult=multiply(themult1[0], c)
+    
+
+    return [thesum[0] , themult[0] , a + " and " +b+ " and " +c+ " sum to " +thesum[0] + "." , "The product of " +a+ " and " +b+" and "+c+" is "+themult[0] + "." ]
 
 }
-// console.log(sumAndMultiply(5, 5, 5));
+console.log(sumAndMultiply(5, 5, 5));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
