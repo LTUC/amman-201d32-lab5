@@ -60,7 +60,9 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
     let msg1=`${a} and ${b} and ${c} sum to ${sumResult1[0]}.`
     let msg2 =`The product of ${a} and ${b} and ${c} is ${mulResult1[0]}.`
-    return [sumResult1[0],mulResult1[0],msg1,msg2];                           
+
+    return [sumResult1[0],mulResult1[0],msg1,msg2];                               
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -84,8 +86,11 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    let sumResult = testArray[0]+testArray[1]+testArray[2];
-    return [sumResult,testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumResult + ' is their sum.'] 
+    let sumResult = sum(testArray[0],testArray[1]);
+    
+    let sumResult1 = sum(sumResult[0],testArray[2]);
+    let msg=testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumResult1[0] + ' is their sum.';
+    return [sumResult1[0],msg] 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
