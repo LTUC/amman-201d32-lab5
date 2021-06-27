@@ -10,10 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 // store input numbers
 
-function sum(a,b) { //eslint-disable-line
+function sum(aaa,b) { //eslint-disable-line
 
-let x = a +b ;
-return [x, "The sum of " + a + " and " + b + " is " + x + "."];
+let x = aaa +b ;
+return [x, "The sum of " + aaa + " and " + b + " is " + x + "."];
 
 }
 testSum(1, 2);
@@ -101,15 +101,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-var testArray = [9,3,4]; //eslint-disable-line
-
+var testArray = [2,3,4]; //eslint-disable-line
 function sumArray([a,s,d]) { 
     //eslint-disable-line
-    var x = sum(a,s)[0];
-    var y = sum(x,d)[0];
-   console.log([a,s,d],'Sum of array')
-
-return [ a + "," + s + "," + d + " was passed in as an array of numbers, and " + y + " is their sum."];
+    let x = sum(a,s)[0];
+    let y = sum(x,d)[0];
+   
+return [y , a + "," + s + "," + d + " was passed in as an array of numbers, and " + y + " is their sum."];
 }
 
 // // // Here is the test for sumArray(); uncomment it to run it
@@ -117,35 +115,23 @@ testSumArray(testArray);
 // testSumArray(testArray);
 console.log([9,3,4],'Sum of array')
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
-
-/////////////////////////////////////
-
-
-
 
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
-
-"The numbers 2,3,4 have a product of 24."
-
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
-
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+n the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
 
-var testArray = [2, 3, 4]; //eslint-disable-line
-
-function multiplyArray([a,s,d])
+var testArray = [2,3,4]; //eslint-disable-line
+function multiplyArray([aa,ss,dd])
 { //eslint-disable-line
-let p = multiply(a,s)[0];
-let t = multiply(p,d)[0];
-return [t ,"The numbers " + a + "," + s + "," + d + " have a product of " + t + "." ];
+let p = multiply(aa,ss)[0];
+let t = multiply(p,dd)[0];
+
+return [t ,"The numbers " + aa + "," + ss + "," + dd + " have a product of " + t + "." ];
 
 }
 testMultiplyArray(testArray);
-console.log([3,6,90],'Multiplay of array')
+console.log([9,3,4],'Multiplay of array')
 
 // // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray1);
